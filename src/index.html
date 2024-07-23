@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tea House</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Raleway', sans-serif;
+            background-color: #F7E9E4; /* Couleur principale (60%) */
+            color: #333;
+        }
+
+        .hero {
+            background-image: url('../assets/images/2024-07-20\ \(10\).jpg');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            color: #FFFFFF;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Augmenter l'opacité de l'ombre */
+            text-align: center; /* S'assurer que le texte est centré */
+        }
+
+
+        .section {
+            padding: 4rem 0;
+        }
+
+        .card {
+            background-color: #FFFFFF; /* Couleur de fond des cartes (blanc) */
+            border-radius: 0.5rem;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 1rem;
+        }
+
+        .text-primary {
+            color: #FF560B; /* Couleur d'accent (10%) */
+        }
+
+        .bg-secondary {
+            background-color: #E1EBE4; /* Couleur secondaire (30%) */
+        }
+    </style>
+</head>
+
+<body>
+    <header class="bg-white shadow-md fixed w-full top-0 z-10">
+        <div class="container mx-auto px-4 py-2 flex justify-between items-center">
+            <div class="text-2xl font-bold text-primary">Tea House</div>
+            <button id="menu-toggle" class="text-primary lg:hidden flex items-center">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+            <nav id="menu" class="hidden lg:flex space-x-4">
+                <ul class="flex space-x-4">
+                    <li><a href="#home" class="hover:underline text-primary">Accueil</a></li>
+                    <li><a href="#menu" class="hover:underline text-primary">Menu</a></li>
+                    <li><a href="#about" class="hover:underline text-primary">À propos</a></li>
+                    <li><a href="#contact" class="hover:underline text-primary">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+        <!-- Menu mobile -->
+        <div id="mobile-menu" class="lg:hidden fixed inset-0 bg-white z-20 transform translate-x-full transition-transform duration-300 ease-in-out">
+            <div class="flex justify-end p-4">
+                <button id="close-menu" class="text-primary">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </div>
+            <nav class="flex flex-col items-center mt-8">
+                <a href="#home" class="py-4 text-primary text-lg hover:bg-gray-200 w-full text-center">Accueil</a>
+                <a href="#menu" class="py-4 text-primary text-lg hover:bg-gray-200 w-full text-center">Menu</a>
+                <a href="#about" class="py-4 text-primary text-lg hover:bg-gray-200 w-full text-center">À propos</a>
+                <a href="#contact" class="py-4 text-primary text-lg hover:bg-gray-200 w-full text-center">Contact</a>
+            </nav>
+        </div>
+    </header>
+    
+
+    <section class="hero">
+        <h1 class="text-center mt-60">Bienvenue au Tea House</h1>
+    </section>
+
+    <section id="about" class="section bg-secondary">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-4 text-center text-primary">À propos</h2>
+            <p class="text-center text-gray-700">Découvrez nos délicieuses crêpes au chocolat, gaufres, jus de fruit, milkshakes, glaces Oreo, brochettes de fruit, Kinder Mighty Crepe, et plus encore!</p>
+        </div>
+    </section>
+
+    <section id="menu" class="section bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-4 text-center text-primary">Menu</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                <div class="card">
+                    <img src="../assets/images/composition-with-delicious-thai-tea-beverage.jpg" alt="Milkshake">
+                    <div class="card-content">
+                        <h3 class="text-xl font-semibold text-primary">Milkshake</h3>
+                        <p class="text-gray-700">Un milkshake délicieux et rafraîchissant, parfait pour toute occasion.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="../assets/images/2024-07-20 (6).jpg" alt="Gaufre">
+                    <div class="card-content">
+                        <h3 class="text-xl font-semibold text-primary">Gaufre</h3>
+                        <p class="text-gray-700">Délicieuse gaufre garnie de chocolat et de fruits frais.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="../assets/images/2024-07-20 (13).jpg" alt="Brochette de fruit">
+                    <div class="card-content">
+                        <h3 class="text-xl font-semibold text-primary">Brochette de fruit</h3>
+                        <p class="text-gray-700">Fruits frais servis sur des brochettes avec une touche de chocolat.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="../assets/images/2024-07-20 (10).jpg" alt="Glace Oreo">
+                    <div class="card-content">
+                        <h3 class="text-xl font-semibold text-primary">Glace Oreo</h3>
+                        <p class="text-gray-700">Délicieuse glace Oreo avec des morceaux de biscuits.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-8">
+                <a href="#menu" class="inline-block mt-4 text-teal-600 py-2 px-6 rounded-lg shadow-lg text-lg font-semibold transition-transform transform hover:scale-105 hover:bg-teal-700">
+                    Voir le menu
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section bg-secondary py-8">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-4 text-center text-primary">Contact</h2>
+            <p class="text-center text-gray-700 mb-8">Contactez-nous pour plus d'informations et pour passer des commandes.</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Contact Information -->
+                <div class="flex flex-col items-center text-center">
+                    <h3 class="text-xl font-semibold mb-4">Informations de Contact</h3>
+                    <p class="text-gray-700 mb-2">Adresse : 123 Rue de la Glace, 75000 Paris, France</p>
+                    <p class="text-gray-700 mb-2">Téléphone : +33 1 23 45 67 89</p>
+                    <p class="text-gray-700 mb-2">Email : info@teahouse.com</p>
+                    <div class="mt-4">
+                        <a href="#" class="text-primary hover:text-teal-500 mx-2"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-primary hover:text-teal-500 mx-2"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-primary hover:text-teal-500 mx-2"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Contact Form -->
+                <div class="flex flex-col items-center">
+                    <h3 class="text-xl font-semibold mb-4">Envoyez-nous un Message</h3>
+                    <form class="w-full max-w-md">
+                        <div class="mb-4">
+                            <label for="name" class="block text-gray-700">Nom</label>
+                            <input type="text" id="name" class="w-full px-3 py-2 border rounded-lg" required>
+                        </div>
+                        <div class="mb-4">
+                            <label for="email" class="block text-gray-700">Email</label>
+                            <input type="email" id="email" class="w-full px-3 py-2 border rounded-lg" required>
+                        </div>
+                        <div class="mb-4">
+                            <label for="message" class="block text-gray-700">Message</label>
+                            <textarea id="message" class="w-full px-3 py-2 border rounded-lg" rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="bg-green-200 text-black px-4 py-2 rounded-lg ">Envoyer</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <footer class="bg-gray-800 text-white py-6">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2024 Tea House. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+    <script>
+        gsap.from(".hero h1", {
+            duration: 1.5,
+            y: -100,
+            opacity: 0,
+            ease: "bounce"
+        });
+
+        gsap.from(".card", {
+            scrollTrigger: ".card",
+            duration: 1,
+            opacity: 0,
+            y: 50,
+            stagger: 0.2
+        });
+    </script>
+    <script>
+        document.getElementById('menu-toggle').addEventListener('click', function () {
+            document.getElementById('mobile-menu').classList.remove('translate-x-full');
+        });
+    
+        document.getElementById('close-menu').addEventListener('click', function () {
+            document.getElementById('mobile-menu').classList.add('translate-x-full');
+        });
+    </script>
+    
+</body>
+
+</html>
